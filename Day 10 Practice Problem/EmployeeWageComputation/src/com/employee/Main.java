@@ -44,5 +44,11 @@ public class Main {
     int wage = totalHours * 20;
     System.out.println("Total Wage: " + wage);
 
-    
+    class EmpWageBuilder {
+        int wagePerHour = 20;
+
+        public int computeWage(int hours) {
+            return hours * wagePerHour;
+        }
+    }
 }
