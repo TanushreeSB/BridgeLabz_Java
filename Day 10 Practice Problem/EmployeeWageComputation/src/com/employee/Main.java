@@ -29,4 +29,20 @@ public class Main {
 
     int wage = hours * wagePerHour;
     System.out.println("Employee Wage: " + wage);
+
+    int maxHours = 100;
+    int maxDays = 20;
+
+    int totalHours = 0;
+    int totalDays = 0;
+
+    while (totalHours < maxHours && totalDays < maxDays) {
+        totalHours += 8;
+        totalDays++;
+    }
+
+    int wage = totalHours * 20;
+    System.out.println("Total Wage: " + wage);
+
+    
 }
