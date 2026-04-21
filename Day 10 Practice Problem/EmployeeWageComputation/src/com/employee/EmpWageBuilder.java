@@ -16,4 +16,14 @@ public class EmpWageBuilder {
             System.out.println("Employee Absent");
         }
     }
+
+    int days = 20;
+    int totalWage = 0;
+
+    for (int i = 0; i < days; i++) {
+        int hours = 8;
+        totalWage += hours * 20;
+    }
+
+    System.out.println("Monthly Wage: " + totalWage);
 }
