@@ -5,7 +5,6 @@ public class UserValidation {
     public static boolean validate(String pattern, String input) {
         return Pattern.matches(pattern, input);
     }
-
     public static void main(String[] args) {
 
         String firstName = "John";

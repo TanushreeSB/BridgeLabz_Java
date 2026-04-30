@@ -2,7 +2,7 @@ import java.util.regex.*;
 
 public class EmailTest {
 
-    static String regex = "^(?![.])(?!.*[.]{2})[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(\\.[a-zA-Z]{2,}){1,2}$";
+    static String regex = "^(?![.])(?!.*[.]{2})[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(\\.[a-zA-Z]{2,}){1,2}$"; // Final Email Validation Regex
 
     public static void validate(String email) {
         boolean result = Pattern.matches(regex, email);
