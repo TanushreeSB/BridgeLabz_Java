@@ -16,4 +16,21 @@ public class UserValidatorTest {
     void givenInvalidFirstName_ShouldReturnFalse() {
         assertFalse(validator.validateFirstName("jo"));
     }
+
+    private void assertFalse(boolean validateFirstName) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'assertFalse'");
+    }
+
+    // Happy Test Case
+    @Test
+    void givenValidLastName_ShouldReturnTrue() {
+        assertTrue(validator.validateLastName("Smith"));
+    }
+
+    // Sad Test Case
+    @Test
+    void givenInvalidLastName_ShouldReturnFalse() {
+        assertFalse(validator.validateLastName("sm"));
+    }
 }
