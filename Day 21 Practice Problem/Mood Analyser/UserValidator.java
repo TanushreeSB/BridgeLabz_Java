@@ -21,5 +21,10 @@ public class UserValidator {
         return mobile.matches(regex);
     }
 
+    public boolean validatePasswordRule1(String password) {
+        String regex = "^.{8,}$";
+        return password.matches(regex);
+    }
+
     
 }

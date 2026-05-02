@@ -55,5 +55,17 @@ public class UserValidatorTest {
         assertFalse(validator.validateMobile("919919819801")); // no space
     }
 
+    // Happy Test Case
+    @Test
+    void givenPasswordMin8Chars_ShouldReturnTrue() {
+        assertTrue(validator.validatePasswordRule1("password"));
+    }
+
+    // Sad Test Case
+    @Test
+    void givenPasswordLessThan8Chars_ShouldReturnFalse() {
+        assertFalse(validator.validatePasswordRule1("pass"));
+    }
+
     
 }
