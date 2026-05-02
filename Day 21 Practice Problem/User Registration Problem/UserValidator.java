@@ -58,6 +58,30 @@ public class UserValidator {
         assertFalse(validator.validateEmail("@bl.co.in"));     // missing username
     }
 
+    public boolean validateFirstName(String firstName) throws UserRegistrationException {
+        String regex = "^[A-Z][a-zA-Z]{2,}$";
+
+        if (!firstName.matches(regex)) {
+            throw new UserRegistrationException(
+                UserRegistrationException.ExceptionType.INVALID_FIRST_NAME,
+                "Invalid First Name"
+            );
+        }
+        return true;
+    }
+
+    public boolean validateLastName(String lastName) throws UserRegistrationException {
+        String regex = "^[A-Z][a-zA-Z]{2,}$";
+
+        if (!lastName.matches(regex)) {
+            throw new UserRegistrationException(
+                UserRegistrationException.ExceptionType.INVALID_LAST_NAME,
+                "Invalid Last Name"
+            );
+        }
+        return true;
+    }
+
     
 
 }
