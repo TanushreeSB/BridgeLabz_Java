@@ -67,5 +67,17 @@ public class UserValidatorTest {
         assertFalse(validator.validatePasswordRule1("pass"));
     }
 
+    // Happy Test Case
+    @Test
+    void givenPasswordWithUppercase_ShouldReturnTrue() {
+        assertTrue(validator.validatePasswordRule2("Password"));
+    }
+
+    // Sad Test Case
+    @Test
+    void givenPasswordWithoutUppercase_ShouldReturnFalse() {
+        assertFalse(validator.validatePasswordRule2("password"));
+    }
+
     
 }

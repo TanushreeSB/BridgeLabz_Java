@@ -26,5 +26,10 @@ public class UserValidator {
         return password.matches(regex);
     }
 
+    public boolean validatePasswordRule2(String password) {
+        String regex = "^(?=.*[A-Z]).{8,}$";
+        return password.matches(regex);
+    }
+
     
 }
