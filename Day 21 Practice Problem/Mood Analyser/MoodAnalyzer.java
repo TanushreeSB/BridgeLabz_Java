@@ -11,11 +11,16 @@ public class MoodAnalyzer {
         this.message = message;
     }
 
-    // Analyse mood
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalysisException {
+
         if (message == null) {
-            return "HAPPY";
+            throw new MoodAnalysisException(MoodType.NULL, "Mood is NULL");
         }
+
+        if (message.isEmpty()) {
+            throw new MoodAnalysisException(MoodType.EMPTY, "Mood is EMPTY");
+        }
+
         if (message.toLowerCase().contains("sad")) {
             return "SAD";
         } else {
