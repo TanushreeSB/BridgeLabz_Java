@@ -90,4 +90,24 @@ public class UserValidatorTest {
     void givenPasswordWithoutNumber_ShouldReturnFalse() {
         assertFalse(validator.validatePasswordRule3("Password"));
     }    
+
+    // Happy Test Case
+    @Test
+    void givenPasswordWithExactlyOneSpecialChar_ShouldReturnTrue() {
+        assertTrue(validator.validatePasswordRule4("Pass@123"));
+    }
+
+    // Sad Test Case (no special character)
+    @Test
+    void givenPasswordWithoutSpecialChar_ShouldReturnFalse() {
+        assertFalse(validator.validatePasswordRule4("Password1"));
+    }
+
+    // Sad Test Case (more than one special character)
+    @Test
+    void givenPasswordWithMultipleSpecialChars_ShouldReturnFalse() {
+        assertFalse(validator.validatePasswordRule4("Pass@@123"));
+    }
+
+    
 }

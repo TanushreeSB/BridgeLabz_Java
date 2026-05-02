@@ -36,5 +36,11 @@ public class UserValidator {
         return password.matches(regex);
     }
 
+    public boolean validatePasswordRule4(String password) {
+        String regex = "^(?=.*[A-Z])(?=.*[0-9])(?=[^@#$%^&+=]*[@#$%^&+=][^@#$%^&+=]*$).{8,}$";
+        return password.matches(regex);
+    }
+
+    
 
 }
