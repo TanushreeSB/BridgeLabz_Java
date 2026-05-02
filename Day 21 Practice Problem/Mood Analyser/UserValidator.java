@@ -41,6 +41,23 @@ public class UserValidator {
         return password.matches(regex);
     }
 
+    // Happy Test Cases
+    @Test
+    void givenMultipleValidEmails_ShouldReturnTrue() {
+        assertTrue(validator.validateEmail("abc@bl.co"));
+        assertTrue(validator.validateEmail("abc.xyz@bl.co.in"));
+        assertTrue(validator.validateEmail("abc123@bl.co"));
+    }
+
+    // Sad Test Cases
+    @Test
+    void givenMultipleInvalidEmails_ShouldReturnFalse() {
+        assertFalse(validator.validateEmail("abc@.com"));     // missing domain
+        assertFalse(validator.validateEmail("abc@bl"));        // missing .com
+        assertFalse(validator.validateEmail("abc.bl.co.in"));  // missing @
+        assertFalse(validator.validateEmail("@bl.co.in"));     // missing username
+    }
+
     
 
 }
