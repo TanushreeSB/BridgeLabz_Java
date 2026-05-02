@@ -42,4 +42,18 @@ public class UserValidatorTest {
     void givenInvalidEmail_ShouldReturnFalse() {
         assertFalse(validator.validateEmail("abc@.com"));
     }
+
+    // Happy Test Case
+    @Test
+    void givenValidMobileNumber_ShouldReturnTrue() {
+        assertTrue(validator.validateMobile("91 9919819801"));
+    }
+
+    // Sad Test Case
+    @Test
+    void givenInvalidMobileNumber_ShouldReturnFalse() {
+        assertFalse(validator.validateMobile("919919819801")); // no space
+    }
+
+    
 }

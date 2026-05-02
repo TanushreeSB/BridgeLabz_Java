@@ -12,7 +12,14 @@ public class UserValidator {
     }
 
     public boolean validateEmail(String email) {
-    String regex = "^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)?@[a-zA-Z]+\\.[a-z]{2,}(\\.[a-z]{2})?$";
-    return email.matches(regex);
+        String regex = "^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)?@[a-zA-Z]+\\.[a-z]{2,}(\\.[a-z]{2})?$";
+        return email.matches(regex);
     }
+
+    public boolean validateMobile(String mobile) {
+        String regex = "^[0-9]{2}\\s[0-9]{10}$";
+        return mobile.matches(regex);
+    }
+
+    
 }
