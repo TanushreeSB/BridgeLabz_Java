@@ -10,4 +10,9 @@ public class UserValidator {
         String regex = "^[A-Z][a-zA-Z]{2,}$";
         return lastName.matches(regex);
     }
+
+    public boolean validateEmail(String email) {
+    String regex = "^[a-zA-Z0-9]+(\\.[a-zA-Z0-9]+)?@[a-zA-Z]+\\.[a-z]{2,}(\\.[a-z]{2})?$";
+    return email.matches(regex);
+    }
 }

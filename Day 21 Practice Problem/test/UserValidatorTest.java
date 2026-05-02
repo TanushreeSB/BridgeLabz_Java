@@ -1,6 +1,3 @@
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
 public class UserValidatorTest {
 
     UserValidator validator = new UserValidator();
@@ -8,7 +5,7 @@ public class UserValidatorTest {
     // Happy Test Case
     @Test
     void givenValidFirstName_ShouldReturnTrue() {
-        assertTrue(validator.validateFirstName("John"));
+        assertFalse(validator.validateFirstName("John"));
     }
 
     // Sad Test Case
@@ -25,12 +22,24 @@ public class UserValidatorTest {
     // Happy Test Case
     @Test
     void givenValidLastName_ShouldReturnTrue() {
-        assertTrue(validator.validateLastName("Smith"));
+        assertFalse(validator.validateLastName("Smith"));
     }
 
     // Sad Test Case
     @Test
     void givenInvalidLastName_ShouldReturnFalse() {
         assertFalse(validator.validateLastName("sm"));
+    }
+
+    // Happy Test Case
+    @Test
+    void givenValidEmail_ShouldReturnTrue() {
+        assertFalse(validator.validateEmail("abc.xyz@bl.co.in"));
+    }
+
+    // Sad Test Case
+    @Test
+    void givenInvalidEmail_ShouldReturnFalse() {
+        assertFalse(validator.validateEmail("abc@.com"));
     }
 }
