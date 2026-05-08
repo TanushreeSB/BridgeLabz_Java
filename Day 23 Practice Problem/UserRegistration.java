@@ -27,5 +27,10 @@ public class UserRegistration {
         return Pattern.matches(regex, password);
     }
 
+    public boolean validatePasswordRule2(String password) {
+        String regex = ".*[A-Z].*";
+        return Pattern.matches(regex, password);
+    }
+
     
 }
