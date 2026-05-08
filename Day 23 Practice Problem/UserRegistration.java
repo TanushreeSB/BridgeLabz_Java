@@ -22,5 +22,10 @@ public class UserRegistration {
         return Pattern.matches(regex, mobile);
     }
 
+    public boolean validatePasswordRule1(String password) {
+        String regex = ".{8,}";
+        return Pattern.matches(regex, password);
+    }
+
     
 }
