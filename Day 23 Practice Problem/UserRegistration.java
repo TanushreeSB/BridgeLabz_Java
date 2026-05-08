@@ -32,5 +32,10 @@ public class UserRegistration {
         return Pattern.matches(regex, password);
     }
 
+    public boolean validatePasswordRule3(String password) {
+        String regex = ".*[0-9].*";
+        return Pattern.matches(regex, password);
+    }
+
     
 }
