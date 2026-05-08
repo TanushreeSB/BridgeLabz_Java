@@ -14,5 +14,10 @@ public class AddressBook {
         }
     }
 
+    public void deleteContact(String firstName) {
+        contacts.removeIf(c -> c.firstName.equals(firstName));
+    }
+
     
+
 }
