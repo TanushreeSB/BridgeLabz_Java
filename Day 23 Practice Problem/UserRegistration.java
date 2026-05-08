@@ -37,5 +37,9 @@ public class UserRegistration {
         return Pattern.matches(regex, password);
     }
 
+    public boolean validatePasswordRule4(String password) {
+        String regex = "^(?=[^@#$%^&*]*[@#$%^&*][^@#$%^&*]*$).*$";
+        return Pattern.matches(regex, password);
+    }
     
 }
